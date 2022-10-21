@@ -1,0 +1,127 @@
+My steps : 
+
+1-we have 2 side : 1-user 2- computer 
+
+2-we have 3 tools : rock, paper and scissor
+
+3- we have 3 states: win, lose and draw 
+
+4-we want just one hand and a structure  to tell us we want to continue or not.
+
+what we need : 
+
+Data structure(user) :  input in shape of arrays to take the users input.
+
+(computer) : random class to generate between rock and ... 
+
+Need try-catch to handle input 
+
+Need funcs for 
+
+
+
+
+
+
+
+
+
+
+
+
+using System;
+
+namespace Helloworld
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string answer = "";
+            
+            while (answer != "NO")
+            {
+                Console.WriteLine("Select any one:\n1->ROCK\n2->PAPER\n3->SCISSOR");
+                string[] choices = new string[3] { "ROCK", "PAPER", "SCISSOR" };
+                Random rnd = new Random();
+                int n = rnd.Next(0, 3);
+                Console.WriteLine("Enter your choice:");
+                string user = Console.ReadLine().ToUpper();
+                Console.WriteLine("Computer:" + choices[n]);
+
+                if (user == "ROCK" && choices[n] == "SCISSOR")
+                {
+                    Console.WriteLine("User wins");
+                    count += 1;
+                }
+                else if (user == "ROCK" && choices[n] == "PAPER")
+                {
+                    Console.WriteLine("Computer wins");
+                    count1 += 1;
+                }
+                else if (user == "PAPER" && choices[n] == "ROCK")
+                {
+                    Console.WriteLine("User wins");
+                    count += 1;
+                }
+                else if (user == "PAPER" && choices[n] == "SCISSOR")
+                {
+                    Console.WriteLine("Computer Wins");
+                    count1 += 1;
+                }
+                else if (user == "SCISSOR" && choices[n] == "ROCK")
+                {
+                    Console.WriteLine("Computer Wins");
+                    count1 += 1;
+                }
+                else if (user == "SCISSOR" && choices[n] == "PAPER")
+                {
+                    Console.WriteLine("User wins");
+                    count += 1;
+                }
+                else
+                {
+                    Console.WriteLine("Same choices");
+                }
+                Console.WriteLine("Do u want to continue(YES/NO):");
+                answer = Console.ReadLine().ToUpper();
+                Console.WriteLine("---------------------------------------");
+            }
+            Console.WriteLine("User wins " + count + " times");
+            Console.WriteLine("Computer wins " + count1 + " times");
+        }
+    }
+}
+
+
+
+/-------------------------------------------------------------------------------------------/
+
+using System;
+
+namespace rock_paper_scissors
+{
+    class Program
+    {
+        static void Main(string[] args, string[] sps)
+        {
+            ComputersHand(sps);
+        } 
+
+        static string ComputersHand(string[] sps)
+        {
+            Random computerRandom = new Random(Convert.ToInt32(sps));
+            return Convert.ToString(computerRandom);
+
+        }
+
+        static void GameValues()
+        {
+            string[] sps = { "Stone", "Paper", "Scissors" };
+        }
+    }
+}
+
+
+
+
