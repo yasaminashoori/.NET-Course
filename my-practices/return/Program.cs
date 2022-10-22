@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace return
+namespace Return
 {
     class Program
     {

@@ -24,6 +24,7 @@ namespace arrays
             }
 
             Console.WriteLine($" max of numbers are : {bigOnes.Max()}");
+            
             //**************************************************** search for max it didn't work !
 
             double[] ints = { 2, 24, 12, 235 };

@@ -24,7 +24,7 @@ namespace Variables
 
             int second, third = 294, first = 32;
 
-            Console.WriteLine($"the results are: {first} {second} {third}");
+            // Console.WriteLine($"the results are: {first} {second} {third}");
             /*
             
             * search later about this error 
