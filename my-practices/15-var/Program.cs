@@ -10,7 +10,6 @@ namespace var
             Console.WriteLine($"your result is: {myNumber}");
             // implicit like var 
             // explicit like string,int....
-
         }
     }
 }

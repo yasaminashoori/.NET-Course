@@ -5,3 +5,9 @@ let see how many ways we have :
 1- oop
 2-functions 
 3-just loops and inputs
+
+
+we can solve this problem with several ways : 
+ 
+
+ 1- 
