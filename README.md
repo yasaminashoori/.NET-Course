@@ -1,4 +1,4 @@
-# C-Sharp-Practices
+# C-Sharp-Course
 
  this is my challenge answers and practices after learning git.
 
