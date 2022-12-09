@@ -1,38 +1,22 @@
 using System;
 
-namespace my_console_app
+namespace _40_Constructor
 {
-    // ***********************************This is a static type class that we don't make any object and it its general
-    // public static class Students
-    // {
-    //     static public string firstName = "Yasamin";
-    //     static public string lastName = "Ashoori";
-    //     static public int age = 21;
-    //     static public int lessons = 12;
-    //     static public void PersonalInformations()
-    //     {
-    //         Console.WriteLine($"the student name is : {firstName} ");
-    //     }
-
-    //     static public void ClassInformations()
-    //     {
-    //         Console.WriteLine("the program for this student is : ");
-    //     }
-    // }
-
-
-    // ********************************Now we try the non static type that we want to initialize it ourself and make object
+    // ***********Make Objects with calling the constructor***********
     public class Students
     {
 
+
         // Constructor class 
-        public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName)
+        public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName, int studentsCount)
         {
             age = studentsAge;
             lessons = studentsLessons;
             firstName = studentsFirstName;
             lastName = studentsLastName;
+            Count = studentsCount;
         }
+
         // public Students()
         // {
         //     // an empty constructor
