@@ -3,6 +3,7 @@ using System;
 namespace my_console_app
 {
     // *********This is the static type class that we don't make any object and it it's general*********
+
     public static class Students
     {
         static public string firstName = "Yasamin";

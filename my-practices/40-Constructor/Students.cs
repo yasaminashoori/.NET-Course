@@ -1,38 +1,36 @@
 using System;
 
 namespace _40_Constructor
+
+
 {
     // ***********Make Objects with calling the constructor***********
+
+
     public class Students
     {
 
 
         // Constructor class 
-        public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName, int studentsCount)
+        public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName)
         {
             age = studentsAge;
             lessons = studentsLessons;
             firstName = studentsFirstName;
             lastName = studentsLastName;
-            Count = studentsCount;
+            // an empty constructor
         }
-
-        // public Students()
-        // {
-        //     // an empty constructor
-        // }
-
         public Students()
         {
-            Count++;
         }
 
-        public static void SignUp()
+
+        public void SignUp()
         {
             Console.WriteLine("students should sign up in the school site ");
         }
 
-        public static int Count;
+        public int Count;
         public string firstName;
         public string lastName;
         public int age;

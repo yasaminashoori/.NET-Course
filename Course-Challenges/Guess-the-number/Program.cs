@@ -6,48 +6,31 @@ namespace Guess_the_word
     {
         static void Main(string[] args)
         {
+            Random random = new Random();
 
+            int returnValue = random.Next(1, 100);
 
-            int min = 1;
+            int Guess = 0;
 
-            int max = 100;
+            Console.WriteLine("I am thinking of a number between 1-100.  Can you guess what it is?");
 
-            bool againPlay = true;
-
-            Random random2 = new Random();
-            do
+            while (Guess != returnValue)
             {
+                Guess = Convert.ToInt32(Console.ReadLine());
 
-                int inputGuess2 = 0;
-                int numberRound2 = 0;
-                int randomNumber2 = random2.Next(min, max + 1);
-
-                while (inputGuess2 != randomNumber2)
+                if (Guess < returnValue)
                 {
-                    Console.WriteLine("Guess a number between 1 - 100 :");
-                    inputGuess2 = Convert.ToInt32(Console.ReadLine());
-
-                    if (inputGuess2 < randomNumber2)
-                    {
-                        Console.WriteLine($"{inputGuess2} is too low! guess another number :");
-                    }
-                    else if (inputGuess2 > randomNumber2)
-                    {
-                        Console.WriteLine(inputGuess2 + "is too high! guess another number :");
-                    }
-                    numberRound2++;
+                    Console.WriteLine("No, the number I am thinking of is higher than " + Guess + ". Can you guess what it is?");
                 }
-                Console.WriteLine("Well done! The answer was " + randomNumber2);
-                Console.WriteLine($"{numberRound2} Rounds");
+                else if (Guess > returnValue)
+                {
+                    Console.WriteLine("No, the number I am thinking of is lower than " + Guess + ". Can you guess what it is?");
+                }
 
-                Console.WriteLine("Do you want to play again ? yes / no");
-                var answer = Console.ReadLine().ToUpper();
-                againPlay = answer.ToUpper() == "YES";
+            }
 
-            } while (againPlay);
-
-            Console.WriteLine("Thank you for playing :))");
-
+            Console.WriteLine("Well done! The answer was " + returnValue);
+            Console.ReadLine();
 
         }
     }

@@ -6,17 +6,11 @@ namespace _40_Objects
     public class Students
     {
 
-        public Students()
-        {
-            Count++;
-        }
-
-        public static void SignUp()
+        public void SignUp()
         {
             Console.WriteLine("students should sign up in the school site ");
         }
 
-        public static int Count;
         public string firstName;
         public string lastName;
         public int age;
