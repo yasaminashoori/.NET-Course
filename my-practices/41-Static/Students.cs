@@ -1,14 +1,11 @@
-// Make Objects with calling the constructor
+// Make Objects with calling the constructor.
+
 using System;
 
-namespace _40_Constructor
+namespace _41_Static
 {
-
-
     public class Students
     {
-
-        // Constructor class 
         public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName)
         {
             age = studentsAge;
@@ -16,8 +13,10 @@ namespace _40_Constructor
             firstName = studentsFirstName;
             lastName = studentsLastName;
         }
+
         public Students()
         {
+            Count++;
         }
 
         public void SignUp()
@@ -25,7 +24,7 @@ namespace _40_Constructor
             Console.WriteLine("students should sign up in the school site ");
         }
 
-        public int Count;
+        public static int Count;
         public string firstName;
         public string lastName;
         public int age;

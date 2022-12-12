@@ -1,8 +1,9 @@
+// Now we try the non static type that we want to initialize it and make object.
+
 using System;
 
 namespace _40_Objects
 {
-    // ***********Now we try the non static type that we want to initialize it and make object**************
     public class Students
     {
 

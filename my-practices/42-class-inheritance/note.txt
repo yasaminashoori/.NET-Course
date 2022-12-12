@@ -1,10 +1,10 @@
-﻿using System;
+using System;
 
 namespace class_inheritance
 {
     class Program
     {
-}
+
         static void Main(string[] args)
         {
             var myCar = new Vehicle();
@@ -13,16 +13,21 @@ namespace class_inheritance
 
         public class Vehicle()
         {
-            public int generallines = 3;
+            public int Price;
 
-        public void Stop()
-        {
-            Console.WriteLine("this vehicle is stopping ...");
-        }
     }
 
-    class Vehicle : Bicycle
+    public void Stop()
     {
-        public string color = "red";
+        Console.WriteLine("this vehicle is stopping ...");
     }
+}
+
+class Vehicle : Bicycle
+{
+    public string color = "red";
+}
+
+}
+
 }
