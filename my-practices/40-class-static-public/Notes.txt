@@ -129,3 +129,58 @@ namespace my_console_app
 
 }
 
+
+
+using System;
+
+namespace my_console_app
+{
+    class Fruit
+    {
+        static void Main(string[] args)
+        {
+            Fruits.name = "oranges";
+            Fruits.PriceStatus();
+            Fruits.Available();
+        }
+    }
+
+    static public class Fruits
+    {
+        static public string name = "grape";
+        static public int number = 4;
+
+        static public void PriceStatus()
+        {
+            Console.WriteLine($"The prices are constant. and here are {number} of them.");
+
+        }
+
+        static public void Available()
+        {
+            Console.WriteLine($"The {name} are available");
+        }
+
+    }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -28,12 +28,12 @@ namespace _40_Constructor
         }
         public void GetPersonalInfo()
         {
-            Console.WriteLine($"the student name is :  {firstName}: ");
+            Console.WriteLine($"the student name is :  {firstName} ");
         }
 
         public void SemesterInfo()
         {
-            Console.WriteLine($"the program for this student is : {age} years old and {lessons} lessons");
+            Console.WriteLine($"the program for {firstName} student is : {lessons} lessons");
         }
     }
 }

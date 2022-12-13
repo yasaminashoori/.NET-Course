@@ -17,7 +17,7 @@ namespace my_console_app
 
         static public void SemesterInfo()
         {
-            Console.WriteLine($"the program for this student is : {course} in this semester");
+            Console.WriteLine($"the program for this student is : {course} lessons in this semester");
         }
     }
 }

@@ -11,7 +11,7 @@ namespace _40_Objects
         
         public void SignUp()
         {
-            Console.WriteLine("students should sign up in the school site at first!");
+            Console.WriteLine($" {firstName} {lastName} you should sign up in the school site at first!");
         }
 
 
@@ -23,7 +23,7 @@ namespace _40_Objects
 
         public void SemesterInfo()
         {
-            Console.WriteLine($"the program for this student is : {age} years old and {lessons} lessons");
+            Console.WriteLine($"the program for {firstName} student is : {lessons} lessons");
         }
     }
 }

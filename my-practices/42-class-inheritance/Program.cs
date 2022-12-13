@@ -29,7 +29,7 @@ namespace class_inheritance
 
             public void Status()
             {
-                Console.WriteLine($"It is ready to use : the name is {Name} and the price is :  {Price}");
+                Console.WriteLine($"It is ready to use ^-^  the name is {Name} and the price is :  {Price}");
             }
         }
     }
