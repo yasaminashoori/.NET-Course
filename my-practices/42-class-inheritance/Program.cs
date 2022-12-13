@@ -8,7 +8,7 @@ namespace class_inheritance
         static void Main(string[] args)
         {
             var MotorCyclejas = new MotorCycle();
-            MotorCyclejas.Price = 70;
+            MotorCyclejas.Price = 5000;
             MotorCyclejas.Name = "Hitachi";
             MotorCyclejas.Status();
         }

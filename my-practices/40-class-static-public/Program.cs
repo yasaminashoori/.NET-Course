@@ -8,9 +8,9 @@ namespace my_console_app
         {
             Console.WriteLine(Students.firstName);
 
-            Students.ClassInformations();
+            Students.SemesterInfo();
 
-            Students.PersonalInformations();
+            Students.GetPersonalInfo();
 
         }
     }

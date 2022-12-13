@@ -7,7 +7,8 @@ namespace _40_Constructor
 
     public class Students
     {
-
+        public string firstName; public string lastName; public int age; public int lessons;
+        
         // Constructor class 
         public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName)
         {
@@ -18,24 +19,19 @@ namespace _40_Constructor
         }
         public Students()
         {
+
         }
 
         public void SignUp()
         {
-            Console.WriteLine("students should sign up in the school site ");
+            Console.WriteLine("students should sign up in the school site at first! ");
         }
-
-        public int Count;
-        public string firstName;
-        public string lastName;
-        public int age;
-        public int lessons;
-        public void PersonalInformations()
+        public void GetPersonalInfo()
         {
             Console.WriteLine($"the student name is :  {firstName}: ");
         }
 
-        public void ClassInformations()
+        public void SemesterInfo()
         {
             Console.WriteLine($"the program for this student is : {age} years old and {lessons} lessons");
         }
