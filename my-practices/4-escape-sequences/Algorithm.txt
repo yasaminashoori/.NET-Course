@@ -1,3 +1,68 @@
+    *
+*       *
+*       *
+*       *
+*       *
+    *
+
+1- we have Rows(or numbers) and Columns and space and *, so we have 4 variables
+
+2-row 1 : 4 space left side, *, 4 space right side, col  4
+
+3- 4 rows with this structure : 0 space, * , 8 space, *
+
+4- and the final row is like the first one 
+
+int n, c, s, a;
+
+
+
+----* 4 space 
+---* 3 space 
+--* 2 sapce 
+-* 1 space 
+* 0 space
+
+int n = 5
+
+for(rows = 1, rows <= n, rows++)
+{
+    for(space = 4, space < n, space--)
+    {
+        console.write("-")
+        while( space < n)
+        {
+            console.write("*")
+        }
+
+        console.writel
+    }
+}
+
+
+int n, c, s, a ;
+
+n = 5;
+for(c = 1, c <= n, c++)
+{
+
+}
+
+
+ int n, rows;
+            n = 5;
+            for (rows = 0; rows <= n; rows++)
+            {
+                for (int s = 5; s <= n; s--)
+                {
+                    Console.Write("-*");
+                }
+                Console.WriteLine();
+            }
+
+
+*********************
+
 // using System;
 
 // namespace escape_sequences
