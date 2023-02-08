@@ -1,2 +1,13 @@
 question in this link :  https://leetcode.com/problems/count-odd-numbers-in-an-interval-range/?envType=study-plan&id=programming-skills-i
 
+high 
+low 
+
+low = 3 
+
+ low = low + 1 = 4 
+ low = low + 1  = 5
+ low = low + 1  = 6
+ low = low + 1  = 7
+
+ 
