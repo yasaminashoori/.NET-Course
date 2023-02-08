@@ -15,7 +15,7 @@ namespace TV_Control_Simulator
                 if (userInputaAnswer == "YES" || userInputaAnswer == "Y")
                 {
                     favChannel = true;
-                    Console.WriteLine($"channel {numberChannel} is added to your favourite channel! \nEnjoy it  ^ --- ^ ");
+                    Console.WriteLine($"channel {numberChannel} is added to your favourite channel ! \nEnjoy it  ^ --- ^ ");
                     Environment.Exit(0);
                 }
                 else
