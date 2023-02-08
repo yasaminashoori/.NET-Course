@@ -1,0 +1,3 @@
+NOTE : problem solved =  >   we should call linq namespace if we want to find the max of array.
+
+
