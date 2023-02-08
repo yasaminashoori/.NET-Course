@@ -6,7 +6,9 @@ namespace _45_arrays_objects
     {
         static void Main(string[] args)
         {
-            Animal[] zoo = {new Animal("bee"), new Animal("butterfly")};
+            Animal[] zoo = { new Animal("bee"), new Animal("butterfly") };
+            // or write in this form =>  var zoo= new Animal[] { new Animal("bee"), new Animal("butterfly") };
+            // we call that anonymos objects
 
             foreach (var animal in zoo)
             {
@@ -18,9 +20,9 @@ namespace _45_arrays_objects
         {
             public string Insects { get; set; }
 
-            public Animal(string kindsInsects)
+            public Animal(string kindesOfInsects)
             {
-                Insects = kindsInsects;
+                Insects = kindesOfInsects;
             }
         }
     }
