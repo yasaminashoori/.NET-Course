@@ -22,7 +22,7 @@ namespace BMI
             var weight = Convert.ToDouble(Console.ReadLine());
         }
 
-        static double BmiFormula(double weight = 160, double height = 80)
+        static double BmiFormula(double weight = 58, double height = 165)
         {
             var bmi = Math.Round(weight / Math.Pow(height / 100, 2), 2);
 
