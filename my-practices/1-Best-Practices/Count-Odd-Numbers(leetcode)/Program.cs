@@ -14,8 +14,13 @@ namespace Count_Odd_Numbers_leetcode_
             int[] nums = new int[high - low + 1];
             for (int i = 0; i < 10; i++)
             {
-                Console.WriteLine(nums[i] = low);
+                nums[i] = low;
+                var result = nums[i];
                 ++low;
+                if (result % 2 != 0)
+                {
+                    Console.WriteLine("The odds numbers are : " + nums[i]);
+                }
             }
         }
     }
