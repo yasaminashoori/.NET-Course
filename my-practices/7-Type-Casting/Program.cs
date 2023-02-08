@@ -10,17 +10,15 @@ namespace Type_Casting
             string adadString = "32";
             double mohit = Convert.ToDouble(adadString);
             Console.WriteLine(mohit.GetType());
-            // in the above exercise we can't convert 32.3 in string format to double
             
             string stringAge = "23";
             int age = Convert.ToInt32(stringAge);
             Console.WriteLine(age.GetType());
-            // Get Type is a built-in method
+            // built-in method GetType
 
             double number = 13.3;
             bool status = Convert.ToBoolean(number);
             Console.WriteLine(status);
-            // // we can convert string to boolean
 
             // implicit type casting
             int first = 12;
@@ -28,11 +26,9 @@ namespace Type_Casting
             second = first;
             Console.WriteLine(second);
 
-            // explicit type casting using convert method
+            // explicit type casting
             double h = Convert.ToDouble("200");
             Console.WriteLine(h);
-
-            // explicit type casting without using convert.to method
             int x = 12;
             double y = 14.656;
             y = (int) x;
