@@ -8,14 +8,13 @@ namespace class_inheritance
         static void Main(string[] args)
         {
             var MotorCyclejas = new MotorCycle();
-            MotorCyclejas.Price = 5000;
-            MotorCyclejas.Name = "Hitachi";
+            MotorCyclejas.nameModel = "Hitachi";
             MotorCyclejas.Status();
         }
 
         public class Vehicle
         {
-            public int Price;
+            public int Price = 5000;
 
             public void Go()
             {
@@ -23,13 +22,12 @@ namespace class_inheritance
             }
         }
 
-        public class MotorCycle : Vehicle
+        class MotorCycle : Vehicle
         {
-            public string Name;
-
+            public string nameModel;
             public void Status()
             {
-                Console.WriteLine($"It is ready to use ^-^  the name is {Name} and the price is :  {Price}");
+                Console.WriteLine($"It is ready to use. the name is {nameModel} and the price is :  {Price}");
             }
         }
     }

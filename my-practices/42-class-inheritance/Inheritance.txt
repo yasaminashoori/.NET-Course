@@ -1,0 +1,4 @@
+we can initilize a field without using static but when we use static we should give them value. 
+
+NOTE : we don't have multiple inheritance in C# and we can't use two base classes in one class but with interfaces we can have multiple
+inheritance with two form  : 1-one base class and one interface 2- two interface as base class
