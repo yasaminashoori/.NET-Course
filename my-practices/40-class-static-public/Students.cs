@@ -7,11 +7,10 @@ namespace my_console_app
 
     public static class Students
     {
-        static public string firstName = "Yasamin"; static public string lastName = "Ashoori"; static public int age = 21; static public int course = 8;
+        static public string firstName = "Yasamin"; static public string lastName = "Ashoori"; static public int age = 21; static public int course = 18;
         static public void GetPersonalInfo()
         {
             Console.WriteLine($"the student's name is : {firstName} {lastName}");
-
             Console.WriteLine($"the student's age is : {age}");
         }
 

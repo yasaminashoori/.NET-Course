@@ -11,7 +11,6 @@ namespace my_console_app
             Students.SemesterInfo();
 
             Students.GetPersonalInfo();
-
         }
     }
 }
