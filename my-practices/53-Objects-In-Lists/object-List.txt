@@ -1,0 +1,28 @@
+    // var plant1 = new Plants("Rose", "flower");
+    // var plant2 = new Plants("sunflower", "flower");
+    // var plant3 = new Plants("tulip", "flower");
+    // var plant4 = new Plants("poppyflower", "flower");
+
+     var plantsLists = new List<Plants>();
+     plantsLists.Add(plant1);
+     plantsLists.Add(plant2);
+     plantsLists.Add(plant3);
+     plantsLists.Add(plant4);
+
+
+As we called this Anonymos object :    new Plants("Rose", "flower")
+
+so :
+
+        var plantsLists = new List<Plants>();
+        plantsLists.Add(new Plants("Rose", "flower"));
+        plantsLists.Add(new Plants("sunflower", "flower"));
+        plantsLists.Add(new Plants("tulip", "flower"));
+        plantsLists.Add(new Plants("poppyflower", "flower"));
+
+Or inside of the list : 
+
+var plantsLists = new List<Plants>();
+{
+    new Plants("Rose", "flower"), new Plants("sunflower", "flower")
+};
