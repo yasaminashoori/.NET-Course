@@ -12,10 +12,10 @@ namespace _40_Constructor
         // Constructor class 
         public Students(int studentsAge, int studentsLessons, string studentsFirstName, string studentsLastName)
         {
-            age = studentsAge;
-            lessons = studentsLessons;
             firstName = studentsFirstName;
             lastName = studentsLastName;
+            age = studentsAge;
+            lessons = studentsLessons;
         }
         public Students()
         {
