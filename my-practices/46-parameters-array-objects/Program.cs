@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace _46_parametrs_array_objects
+namespace _46_parameters_array_objects
 {
     class Program
     {
