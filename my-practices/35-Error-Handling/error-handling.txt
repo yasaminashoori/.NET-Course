@@ -1,0 +1,66 @@
+NOTE : 
+
+if you want handle the error be careful about the sequence of codes . 
+when you run the codes, compiler reads line by line of your program so if you don't pay attention to this you will get error. 
+
+for example : lokk at this program that we put the dangerous codes in try part if you run thihs program you never see the right result 
+and the correct form below : 
+
+
+using System;
+
+namespace _35_Error_Handling
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            Console.WriteLine("Enter your name :");
+            Console.WriteLine("Enter your password :");
+            var showPass = password.Insert(0, "@150");
+            Console.WriteLine($"your name is {name} \n password : {showPass}");
+            try
+            {
+                var name = Console.ReadLine();
+                var password = Console.ReadLine();
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Please enter an inteeger password and string names");
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+}
+
+correct form :  we put the whole codes that give error in try part, considering to the sequence too.
+
+
+
+using System;
+
+namespace _35_Error_Handling
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your name :");
+            try
+            {
+                var name = Console.ReadLine();
+                Console.WriteLine("Enter your password :");
+                var password = Console.ReadLine();
+                var showPass = password.Insert(0, "@150");
+                Console.WriteLine($"your name is {name} \n password : {showPass}");
+            }
+            catch (FormatException ex)
+            {
+                Console.WriteLine("Please enter an inteeger password and string names");
+                Console.WriteLine(ex.Message);
+            }
+        }
+    }
+}
+
