@@ -13,7 +13,7 @@ namespace _43_access_modifires
 
         class Employee
         {
-            int _salary;
+            string _name;
             public int Salary { get; set; }
         }
     }
