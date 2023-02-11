@@ -1,0 +1,18 @@
+Abstraction helps to keep safe our classes.
+Abstracts have 2 levels : 1-Abstract class 2-Abstract Methods in this episode.
+
+ we'll talk about abstract class now  : 
+
+// we cant make objects from abstract classes => var Vehicle1 = new Vehicle();  
+
+and also we can define the last child class : 
+
+// WE cant make child from sealed classes
+
+        // class BusElectric : Bus
+        // {
+        //     int numbers;
+        // }
+
+2-Abstract methods : 
+
