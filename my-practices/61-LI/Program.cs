@@ -16,8 +16,8 @@ namespace _61_LINQ
                 Console.WriteLine(item);
             }
 
-            var studentsList = StudentDatabase.GetStudentsFromDb();
 
+            var studentsList = GetStudentsList();
             var studentsScoreMoreThan80 = from student in studentsList
                                           where student.Score > 80
                                           select student.StudentName;
@@ -26,11 +26,25 @@ namespace _61_LINQ
                 Console.WriteLine(item);
             }
 
+
             studentsScoreMoreThan80 = studentsList.Where(x => x.Score > 80).Select(x => x.StudentName);
             foreach (var item in studentsScoreMoreThan80)
             {
                 Console.WriteLine(item);
             }
+        }
+
+
+
+        private static IQueryable<Student> GetStudentsList()
+        {
+            return new[] {
+                new Student() {StudentId = 1, StudentName = "John Bross", Score = 45, StudentCity = "NYC"},
+                new Student() {StudentId = 2, StudentName = "Jasmine Curly", Score = 78, StudentCity = "Berlin"},
+                new Student() {StudentId = 4, StudentName = "Sam Wild", Score = 65, StudentCity = "CA"},
+                new Student() {StudentId = 6, StudentName = "Sara Ride", Score = 24, StudentCity = "LA"},
+                new Student() {StudentId = 7, StudentName = "Leo Aniston", Score = 87, StudentCity = "Florida"},
+            }.AsQueryable();
         }
     }
 }
