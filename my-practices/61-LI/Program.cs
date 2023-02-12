@@ -17,9 +17,16 @@ namespace _61_LINQ
             }
 
             var studentsList = StudentDatabase.GetStudentsFromDb();
+
             var studentsScoreMoreThan80 = from student in studentsList
                                           where student.Score > 80
                                           select student.StudentName;
+            foreach (var item in studentsScoreMoreThan80)
+            {
+                Console.WriteLine(item);
+            }
+
+            studentsScoreMoreThan80 = studentsList.Where(x => x.Score > 80).Select(x => x.StudentName);
             foreach (var item in studentsScoreMoreThan80)
             {
                 Console.WriteLine(item);
