@@ -1,10 +1,5 @@
-using System;
-using System.Linq;
+//first solution
 
-namespace _64_LINQ_Practice
-{
-    class Program
-    {
         static void Main(string[] args)
         {
             var studentList = StudentDatabase.GetStudentsFromDb();
@@ -31,8 +26,7 @@ namespace _64_LINQ_Practice
                 }
             }
         }
-    }
-}
+    
 
 
 //second way 
@@ -62,14 +56,67 @@ namespace _64_LINQ_Practice
             //     Console.WriteLine(item);
             // }
 
-//the right way
 
+
+
+//the right way with Query syntax 
 
             var studentList = StudentDatabase.GetStudentsFromDb();
-            var studentsName = from Student in studentList
-                               where (Student.StudentActvity == true) && (Student.Score > 80) && (Student.StudentCity == "NYC")
-                               select Student.StudentName;
-            foreach (var item in studentsName)
+            
+            var studentsName0 = from Student in studentList
+                                where (Student.StudentActvity == true) && (Student.Score > 80) && (Student.StudentCity == "NYC")
+                                select Student.StudentName;
+            foreach (var item in studentsName0)
+            {
+                Console.WriteLine("student0 :" +item);
+            }
+
+            var studentsName2 = from Student in studentList
+                                where (Student.Score > 80) || (Student.StudentCity == "CA")
+                                select Student.StudentName;
+            foreach (var item in studentsName2)
             {
                 Console.WriteLine(item);
+            }
+
+            var studentsName3 = studentList.OrderByDescending(x => x.StudentActvity == false).Select(x => x.StudentName);
+            foreach (var item in studentsName3)
+            {
+                Console.WriteLine(item);
+            }
+
+            var studentsName4 = (studentList.Average(x => x.Score));
+            Console.WriteLine(studentsName4);
+
+
+
+
+// r and d contains
+
+ // studentsScoreMoreThan80 = studentsList.Where(x => x.Score > 80).Select(x => x.StudentName);
+
+            // var studentsName5 = from Student in studentList
+            //                     where (Student.StudentActvity == true) && (Student.StudentCity == "CA") ||
+            //                     select Student.StudentName;
+            // string existr = "r";
+            // string existR = "R";
+            // string existd = "d";
+            // string existD = "D";
+            // var studentsName6 = studentsName5.Contains(x => x.StudentName == existr);
+            // var studentsName5Average = studentList.Average(studentsName5 => studentsName5.Score);
+
+
+
+
+
+
+//Contain letter
+
+
+List<string> xstudent = new List <string> (studentList.Select(x => x.StudentName));
+            IEnumerable<string> final = xstudent.Where(
+                                x => x.Contains("R") || x.Contains("r") || x.Contains("d") ||  x.Contains("D"));
+            foreach (string stname in final)
+            {
+                Console.WriteLine(stname);
             }
