@@ -1,0 +1,75 @@
+using System;
+using System.Linq;
+
+namespace _64_LINQ_Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var studentList = StudentDatabase.GetStudentsFromDb();
+            var activityStatus = studentList.Where(x => x.StudentActvity == true)
+                                .Select(x => x.StudentName);
+
+            var scoreMoreThan80 = studentList.Where(x => x.Score > 80)
+                                .Select(x => x.StudentName);
+
+            var liveInNyc = studentList.Where(x => x.StudentCity == "NYC")
+                                .Select(x => x.StudentName);
+
+            if (Convert.ToBoolean(activityStatus) && Convert.ToBoolean(scoreMoreThan80) && Convert.ToBoolean(liveInNyc) == true)
+            {
+                foreach (var item in studentList)
+                {
+                    foreach (var item2 in scoreMoreThan80)
+                    {
+                        foreach (var item3 in liveInNyc)
+                        {
+                            Console.WriteLine(item + item2 + item3);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+//second way 
+
+ // var studentList = StudentDatabase.GetStudentsFromDb();
+            // var activityStatus = studentList.Where(x => x.StudentActvity == true)
+            //                     .Select(x => x.StudentName);
+
+            // var scoreMoreThan80 = studentList.Where(x => x.Score > 80)
+            //                     .Select(x => x.StudentName);
+
+            // var liveInNyc = studentList.Where(x => x.StudentCity == "NYC")
+            //                     .Select(x => x.StudentName);
+
+            // foreach (var item in activityStatus)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+
+            // var studentsList = GetStudentsList();
+            // var studentsScoreMoreThan80 = from student in studentsList
+            //                               where student.Score > 80
+            //                               select student.StudentName;
+            // foreach (var item in studentsScoreMoreThan80)
+            // {
+            //     Console.WriteLine(item);
+            // }
+
+//the right way
+
+
+            var studentList = StudentDatabase.GetStudentsFromDb();
+            var studentsName = from Student in studentList
+                               where (Student.StudentActvity == true) && (Student.Score > 80) && (Student.StudentCity == "NYC")
+                               select Student.StudentName;
+            foreach (var item in studentsName)
+            {
+                Console.WriteLine(item);
+            }
