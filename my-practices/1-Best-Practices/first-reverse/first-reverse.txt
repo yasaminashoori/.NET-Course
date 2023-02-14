@@ -1,0 +1,17 @@
+using System;
+using System.Linq;
+
+namespace first_reverse
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your string : ");
+            var inputStr = Console.ReadLine().ToCharArray();
+            var result = inputStr.Reverse();
+            Console.WriteLine(result);
+        }
+    }
+}
+
