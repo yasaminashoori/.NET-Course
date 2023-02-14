@@ -7,25 +7,27 @@ namespace _3_dividing_2numbers
     {
         static void Main(string[] args)
         {
-            try
+            while (true)
             {
-                OperationDivide();
+                try
+                {
+                    OperationDivide();
+                    break;
+                }
+                catch (DivideByZeroException ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Enter another number !");
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine(ex.Message);
+                    Console.WriteLine("Try again !");
+                }
             }
-            catch (DivideByZeroException ex)
-            {
-                Console.WriteLine(ex.Message);
-                Console.WriteLine("Enter another number !");
-                OperationDivide();
-            }
-            catch (Exception ex)
-            {
-                Console.WriteLine(ex.Message);
-                OperationDivide();
-            }
-                
-
         }
-        public static void OperationDivide()
+
+        static void OperationDivide()
         {
             Console.WriteLine("Enter your first number :");
             var firstNum = Convert.ToInt32(Console.ReadLine());
