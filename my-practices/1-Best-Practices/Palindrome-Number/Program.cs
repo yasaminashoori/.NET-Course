@@ -6,26 +6,36 @@ namespace Palindrome_Number
     {
         static void Main(string[] args)
         {
-            PalindromeChecker();
+            var palindromeOne = new Solution();
+            Console.WriteLine(palindromeOne.IsPalindrome());
         }
 
-        public static void PalindromeChecker()
+        public class Solution
         {
-            Console.WriteLine("Enter an inteeger number : ");
-            var str = Console.ReadLine();
-            string reverse = String.Empty;
-            for (int i = str.Length - 1; i >= 0; i--)
+            public bool IsPalindrome(int x = 123)
             {
-                reverse += str[i];
-            }
-            if (reverse == str)
-            {
-                Console.WriteLine($"{reverse} True, IT is a palindrome number.");
-            }
-            else
-            {
-                Console.WriteLine($"{reverse} Flase : not a palindrome number");
+                Console.Write("x = ");
+                x = int.Parse(Console.ReadLine());
+                string reverse = String.Empty;
+
+                while (x >= -2147483648 && x <= 2147483648 - 1)
+                {
+                    for (int i = x.ToString().Length - 1; i >= 0; i--)
+                    {
+                        reverse += x.ToString()[i];
+                    }
+                    if (reverse == x.ToString())
+                    {
+                        return true;
+                    }
+                    else if (reverse != x.ToString())
+                    {
+                        return false;
+                    }
+                }
+                return Convert.ToBoolean("not in range !");
             }
         }
+
     }
 }
