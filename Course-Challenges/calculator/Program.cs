@@ -6,51 +6,39 @@ namespace calculator
     {
         static void Main(string[] args)
         {
-            CalcOperations calcOperations = new CalcOperations();
+            CalcOperations myCalc = new CalcOperations();
             do
             {
-                Console.Clear();
-                Console.WriteLine("--------------");
-                Console.WriteLine("Calculator Program");
-                Console.WriteLine("--------------");
-                Console.WriteLine("Enter number : {0}1 - Addition{0}2 - Substraction{0}3 - Multiplication{0}4 - Division", Environment.NewLine);
-                var userInput = int.Parse(Console.ReadKey().KeyChar.ToString());
-                Console.WriteLine();
-
-                GetUserInput(calcOperations);
-
-                var getOperation = new double[] { calcOperations.Counting(), calcOperations.Subtraction(), calcOperations.Multiplication(), calcOperations.Division() };
-                Console.WriteLine(getOperation[userInput - 1]);
-                Console.ReadKey();
-
-
                 try
                 {
-                    calcOperations.firstNum = double.Parse(Console.ReadLine());
-                    calcOperations.secondNum = double.Parse(Console.ReadLine());
-                    calcOperations.Counting();
-                    calcOperations.Subtraction();
-                    calcOperations.Multiplication();
-                    calcOperations.Division();
-                    GetUserInput(calcOperations);
+                    Console.Clear();
+                    Console.WriteLine("--------------");
+                    Console.WriteLine("Calculator Program");
+                    Console.WriteLine("--------------");
+                    Console.WriteLine("Enter number : {0}1 - Addition{0}2 - Substraction{0}3 - Multiplication{0}4 - Division", Environment.NewLine);
+                    var userInput = int.Parse(Console.ReadKey().KeyChar.ToString());
+                    Console.WriteLine();
+                    GetUserInput(myCalc);
+                    var getOperation = new double[] { myCalc.Counting(), myCalc.Subtraction(), myCalc.Multiplication(), myCalc.Division() };
+                    Console.WriteLine(getOperation[userInput - 1]);
+                    Console.WriteLine("Enter press to go to the next step");
+                }
+                catch (DivideByZeroException ex)
+                {
+                    Console.WriteLine("Please enter another number more than 0.");
+                    Console.WriteLine(ex.Message);
                 }
                 catch (FormatException ex)
                 {
-                    Console.WriteLine("Please Entered one number between 1 - 4");
-
+                    Console.WriteLine("Please enter a number.");
+                    Console.WriteLine(ex.Message);
                 }
-
-                catch (DivideByZeroException ex)
-                {
-                    Console.WriteLine("You can't devide by 0 :( Enter another number !");
-                }
-
                 catch (Exception ex)
                 {
                     Console.WriteLine(ex.Message);
                 }
-                Console.WriteLine("Do you want to continue ? (Y or N): ");
 
+                Console.WriteLine("Do you want to continue ? (Y or N): ");
             } while (Console.ReadLine().ToUpper() == "Y");
 
             Console.WriteLine("Thanks for using ^-^");
@@ -62,18 +50,14 @@ namespace calculator
 
             Console.WriteLine("Enter the number two :");
             calcOperations.secondNum = double.Parse(Console.ReadLine());
-
-            // Console.WriteLine("Please Entered one number between 1 - 4");
-
-            // Console.WriteLine("You can't devide by 0 :( Enter another number !");
         }
     }
 
     class CalcOperations
     {
-        public double firstNum;
-        public double secondNum;
-        public double result;
+        public double firstNum { get; set; }
+        public double secondNum { get; set; }
+        public double result { get; set; }
 
         public double Counting()
         {
@@ -93,6 +77,7 @@ namespace calculator
         public double Division()
         {
             result = firstNum / secondNum;
+            Console.Write("Your Result is ");
             return result;
         }
     }
