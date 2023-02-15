@@ -1,3 +1,6 @@
+ LINQ = Language Integrated Query
+
+
 Query syntax : 
 
 
