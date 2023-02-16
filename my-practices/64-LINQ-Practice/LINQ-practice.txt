@@ -31,7 +31,7 @@
 
 //second way 
 
- // var studentList = StudentDatabase.GetStudentsFromDb();
+            // var studentList = StudentDatabase.GetStudentsFromDb();
             // var activityStatus = studentList.Where(x => x.StudentActvity == true)
             //                     .Select(x => x.StudentName);
 
@@ -93,6 +93,8 @@
 
 // r and d contains
 
+
+
  // studentsScoreMoreThan80 = studentsList.Where(x => x.Score > 80).Select(x => x.StudentName);
 
             // var studentsName5 = from Student in studentList
@@ -110,7 +112,7 @@
 
 
 
-//Contain letter
+//Contain letter program 
 
 
 List<string> xstudent = new List <string> (studentList.Select(x => x.StudentName));
@@ -119,4 +121,50 @@ List<string> xstudent = new List <string> (studentList.Select(x => x.StudentName
             foreach (string stname in final)
             {
                 Console.WriteLine(stname);
+            }
+
+
+///////////////////////////////number 6
+
+            var studentsName6 = studentList.Where(x => (x.StudentActvity == true) && (x.StudentCity == "CA"))
+            .Select(x => x.StudentName);
+            // List<string> listStudentName6 = new List<string>(studentList.Where(x => (x.StudentActvity == true)
+             && (x.StudentCity == "CA")).Select(x => x.StudentName));
+            List<string> xstudent = new List<string>(studentList.Select(x => x.StudentName));
+            IEnumerable<string> final = xstudent.Where(
+                                x => x.Contains("R") || x.Contains("r") || x.Contains("d") || x.Contains("D"));
+            
+            // var convertFinal = final.ToArray();
+            // var studentsName6Final = studentsName6.ToArray();
+            
+            foreach (string studentFinal in final)
+            {
+                Console.WriteLine("The students that are active, live in CA and names with r/R or D/d letter :" +  studentFinal);
+            }
+
+
+SELECT => SCORE 
+
+NAME = r / d 
+
+NAME = CA / TRUE 
+
+
+//NUMBER 6 second
+
+
+var studentsName6 = studentList.Where(x => (x.StudentActvity == true) && (x.StudentCity =="CA")).Average(x => x.Score);
+            List<string> xstudent = new List<string>(studentList.Select(x => x.StudentName));
+            List<int> intstudent = new List<int>(studentList.Select(x => x.Score));
+            
+            IEnumerable<string> final = xstudent.Where(
+                                x => x.Contains("R") || x.Contains("r") || x.Contains("d") || x.Contains("D"));
+            IEnumerable<int> final2 = intstudent;
+            var convFinal = final.AsQueryable();
+            var convFinal2 = final2.AsQueryable();
+            var finalll = studentsName6.AsQueryable().Concat(convFinal.AsQueryable()).Concat(convFinal2);
+            // var final4 = 
+            foreach (var item4 in finalll)
+            {
+                Console.WriteLine("Students with false activity ordered descending by their score " + item4.StudentName);
             }

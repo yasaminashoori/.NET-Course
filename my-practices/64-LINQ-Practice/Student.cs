@@ -2,6 +2,7 @@ namespace _64_LINQ_Practice
 {
     public class Student
     {
+        internal bool score;
         public int StudentId { get; set; }
         public string StudentName { get; set; }
         public int Score { get; set; }
