@@ -8,7 +8,7 @@ namespace Count_Odd_Numbers_leetcode_
         {
             Console.WriteLine("Enter a number more than 0 as low number:");
             var low = Convert.ToInt32(Console.ReadLine());
-            Console.WriteLine("Enter a number more than low as high number : ");
+            Console.WriteLine("Enter a number more than low number, as high number : ");
             var high = Convert.ToInt32(Console.ReadLine());
             // var between = high - low + 1;
             int[] nums = new int[high - low + 1];
