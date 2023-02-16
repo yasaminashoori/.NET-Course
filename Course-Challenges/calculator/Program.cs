@@ -21,7 +21,6 @@ namespace calculator
                     GetUserInput(myCalc);
                     var getOperation = new double[] { myCalc.Counting(), myCalc.Subtraction(), myCalc.Multiplication(), myCalc.Division() };
                     Console.WriteLine(getOperation[userInput - 1]);
-                    Console.WriteLine("Enter press to go to the next step");
                 }
                 catch (DivideByZeroException ex)
                 {
