@@ -1,0 +1,225 @@
+// The right Code that works :
+
+using System;
+namespace Guess_the_word
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+
+            int returnValue = random.Next(1, 100);
+
+            int Guess = 0;
+
+            Console.WriteLine("I am thinking of a number between 1-100.  Can you guess what it is?");
+
+            while (Guess != returnValue)
+            {
+                Guess = Convert.ToInt32(Console.ReadLine());
+
+                if (Guess < returnValue)
+                {
+                    Console.WriteLine("No, the number I am thinking of is higher than " + Guess + ". Can you guess what it is?");
+                }
+                else if (Guess > returnValue)
+                {
+                    Console.WriteLine("No, the number I am thinking of is lower than " + Guess + ". Can you guess what it is?");
+                }
+            }
+            Console.WriteLine("Well done! The answer was " + returnValue);
+            Console.ReadLine();
+        }
+    }
+}
+
+// The wrong way should checke and debug 
+
+using System;
+
+namespace Guess_the_word
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Random random = new Random();
+            int myRandom = random.Next(1, 101);
+            // int reounds = 0;
+            bool userFinalGuess = false;
+            int rounds = 0;
+            var playAgain = "";
+            do
+            {
+                Console.WriteLine("Guess a number between 1 - 100 :");
+                var userInput = Convert.ToInt32(Console.ReadLine());
+                while (userInput != myRandom || userInput == myRandom)
+                {
+                    if (userInput > myRandom)
+                    {
+                        Console.WriteLine($"{userInput} is too high !");
+                    }
+                    else if (userInput < myRandom)
+                    {
+                        Console.WriteLine($"{userInput} is too low !");
+                    }
+                    else
+                    {
+                        Console.WriteLine($"You win ! in {rounds} rounds !");
+                    }
+                    rounds++;
+                }
+                Console.WriteLine("DO you want to play again ? yes or no ");
+                playAgain = Console.ReadLine().ToUpper();
+                userFinalGuess = playAgain == "YES";
+                if (playAgain == "YES")
+                {
+
+                }
+            } while (userFinalGuess);
+        }
+    }
+}
+
+
+
+
+//Another Way and not checked yet : 
+
+ Random random = new Random();
+ int myRandom = random.Next(1, 101);
+ int reounds = 0;
+bool userFinalGuess = false;
+int rounds = 0;
+var playAgain = "";
+do
+{
+Console.WriteLine("Guess a number between 1 - 100 :");
+ var userInput = Convert.ToInt32(Console.ReadLine());
+ while (userInput != myRandom || userInput == myRandom)
+  {
+ if (userInput > myRandom)
+ {
+ Console.WriteLine($"{userInput} is too high !");
+}
+ else if (userInput < myRandom)
+        {
+      Console.WriteLine($"{userInput} is too low !");
+       }
+        else
+       {
+            Console.WriteLine($"You win ! in {rounds} rounds !");
+        }
+      rounds++;
+     }
+     Console.WriteLine("DO you want to play again ? yes or no ");
+   playAgain = Console.ReadLine().ToUpper();
+     userFinalGuess = playAgain == "YES";
+     if (playAgain == "YES")
+     {
+
+   }
+ } while (userFinalGuess);
+
+
+
+
+// Stackoverflow code  works correctly 
+
+using System;
+
+namespace Guess_the_word
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int total = 1,
+            low = 0,
+            high = 0;
+            int ranNum1,
+            guess;
+            string guessStr;
+            Random ranNumGen = new Random();
+            ranNum1 = ranNumGen.Next(1, 10);
+
+            Console.Write("Enter your guess >> ");
+            guessStr = Console.ReadLine();
+            guess = Convert.ToInt16(guessStr);
+
+            while (guess != ranNum1)
+            {
+                while (guess < ranNum1)
+                {
+                    Console.WriteLine("Your guess is to low, try again.");
+                    Console.Write("\nEnter your guess >> ");
+                    guessStr = Console.ReadLine();
+                    guess = Convert.ToInt16(guessStr);
+                    ++total;
+                    ++low;
+                }
+                while (guess > ranNum1)
+                {
+                    Console.WriteLine("Your guess is to high, try again.");
+                    Console.Write("\nEnter your guess >> ");
+                    guessStr = Console.ReadLine();
+                    guess = Convert.ToInt16(guessStr);
+                    ++total;
+                    ++high;
+                }
+            }
+            //total = low + high;
+            Console.WriteLine("It took you {0} guesses to correctly guess {1}", total, ranNum1);
+        }
+    }
+}
+
+            //Another right one 
+using System;
+using System.Collections.Generic;
+using System.Text;
+class Program
+{
+    static void Main(string[] args)
+    {
+        while (true)
+        {
+            int randno = Newnum(1, 101);
+            int count = 1;
+            while (true)
+            {
+                Console.Write("Enter a number between 1 and 100(0 to quit):");
+                int input = Convert.ToInt32(Console.ReadLine());
+                if (input == 0)
+                    return;
+                else if (input < randno)
+                {
+                    Console.WriteLine("Low, try again.");
+                    ++count;
+                    continue;
+                }
+                else if (input > randno)
+                {
+                    Console.WriteLine("High, try again.");
+                    ++count;
+                    continue;
+                }
+                else
+                {
+                    Console.WriteLine("You guessed it! The number was {0}!",
+                                       randno);
+                    Console.WriteLine("It took you {0} {1}.\n", count,
+                                       count == 1 ? "try" : "tries");
+                    break;
+                }
+            }
+        }
+
+    }
+    static int Newnum(int min, int max)
+    {
+        Random random = new Random();
+        return random.Next(min, max);
+    }
+}
