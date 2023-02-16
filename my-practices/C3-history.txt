@@ -1,4 +1,4 @@
 In this course we will learn 7,8,9,10 versions of C#
 version 7 is realted to asp.net 3.1 
 version 10 is related to asp.net 6 
-and we have C# 11 related to asp.net 7 that is not released yet
+and we have C# 11 related to asp.net 7 that's not released yet
