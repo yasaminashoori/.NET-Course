@@ -28,8 +28,6 @@ namespace switch_case
                 Console.WriteLine("your language doesn't supported");
             }
 
-
-
             switch (lang)
             {
                 case "c#":
@@ -56,7 +54,6 @@ namespace switch_case
             }
 
             Console.WriteLine(result);
-
 
             var finalResult = lang  ==  "php" ? "php is your language" : "this is not supported";
             Console.WriteLine(finalResult);
