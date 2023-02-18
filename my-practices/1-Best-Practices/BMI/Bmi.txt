@@ -119,3 +119,33 @@ namespace BMI
         }
     }
 }
+
+
+
+//Switch-case
+
+
+switch (bmi)
+            {
+                case <= 18.4:
+                    Console.Write("You are Underweight : ");
+                    return bmi;
+                    break;
+
+                case >= 18.52:
+                case <= 24.9:
+                    Console.Write("You are Normal : ");
+                    return bmi;
+                    break;
+
+                case >= 25.0:
+                case <= 39.9:
+                    Console.Write("You are Overweight : ");
+                    return bmi;
+                    break;
+
+                default:
+                    Console.Write("You are Obese : ");
+                    return bmi;
+                    break;
+            }

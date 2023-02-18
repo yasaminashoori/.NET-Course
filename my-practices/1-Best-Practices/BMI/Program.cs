@@ -25,7 +25,7 @@ namespace BMI
         static double BmiFormula(double weight = 58, double height = 165)
         {
             var bmi = Math.Round(weight / Math.Pow(height / 100, 2), 2);
-
+            
             if (bmi <= 18.4)
             {
                 Console.Write("You are Underweight : ");
@@ -49,7 +49,6 @@ namespace BMI
                 Console.Write("You are Obese : ");
                 return bmi;
             }
-
         }
     }
 }
