@@ -28,7 +28,6 @@ namespace Return
             {
                 
             }
-
             Console.WriteLine($" max of numbers are : {bigNumbers.Max()}");
         }
     }
