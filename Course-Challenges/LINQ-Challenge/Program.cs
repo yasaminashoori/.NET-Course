@@ -12,7 +12,7 @@ namespace LINQ_Challenge
             var studentList = StudentDatabase.GetStudentsFromDb();
 
             //number 1 
-            var studentsName1 = studentList.Where(x => (x.StudentActvity == true) && (x.Score > 80) && (x.StudentCity == "NYC"))
+            var studentsName1 = studentList.Where(x => x.StudentActvity && x.Score > 80 && x.StudentCity == "NYC")
                                 .Select(x => x.StudentName);
             foreach (var item1 in studentsName1)
             {
@@ -20,7 +20,7 @@ namespace LINQ_Challenge
             }
 
             //number 2
-            var studentsName2 = studentList.Where(x => (x.Score > 80) || (x.StudentCity == "CA"))
+            var studentsName2 = studentList.Where(x => x.Score > 80 || x.StudentCity == "CA")
                                 .Select(x => x.StudentName);
             foreach (var item2 in studentsName2)
             {
@@ -31,15 +31,13 @@ namespace LINQ_Challenge
             var studentsName3 = from Student in studentList
                                 where (Student.StudentName[0] >= 'b' || Student.StudentName[0] <= 'B')
                                 select new MinimalStudent() { StudentName = Student.StudentName };
-
             foreach (var item3 in studentsName3)
             {
                 Console.WriteLine("The students that b/B as their first letter name in minimal class : " + item3.StudentName);
             }
 
-
             //number 4
-            var studentsName4 = studentList.OrderByDescending(x => x.Score).Where(x => x.StudentActvity == false).Select(x => x.StudentName);
+            var studentsName4 = studentList.OrderByDescending(x => x.Score).Where(x => !x.StudentActvity).Select(x => x.StudentName);
             foreach (var item4 in studentsName4)
             {
                 Console.WriteLine($"Students with false activity ordered descending by their score : {item4}");
@@ -52,7 +50,7 @@ namespace LINQ_Challenge
             //number 6
             var letters = new[] { "r", "d" };
             var average = studentList.Where(st =>
-                    st.StudentActvity == true
+                    st.StudentActvity
                     && st.StudentCity == "CA"
                     && letters.Any(l => st.StudentName.Contains(l, StringComparison.OrdinalIgnoreCase))
                  )
