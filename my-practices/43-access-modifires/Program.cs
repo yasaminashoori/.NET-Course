@@ -6,14 +6,14 @@ namespace _43_access_modifires
     {
         static void Main(string[] args)
         {
-            var Employee1 = new Employee();
-            Employee1.Salary = 15000000;
-            Console.WriteLine($"Monthly salar for this emplyee is {Employee1.Salary} Million.");
+            var employee1 = new Employee();
+            employee1.Salary = 15000000;
+            Console.WriteLine($"Monthly salar for this emplyee is {employee1.Salary} Million.");
         }
 
         class Employee
         {
-            string _name;
+            int _salary;
             public int Salary { get; set; }
         }
     }
