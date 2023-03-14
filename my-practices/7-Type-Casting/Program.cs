@@ -36,7 +36,6 @@ namespace Type_Casting
             double notBool = 2.234;
             bool boolValue = Convert.ToBoolean(notBool);
             Console.WriteLine(boolValue);
-
         }
     }
 }
