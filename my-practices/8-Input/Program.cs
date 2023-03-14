@@ -8,10 +8,7 @@ namespace Input
         {
             Console.WriteLine("Enter your name:");
             string result1 = Console.ReadLine();
-            // double result1 = Convert.ToDouble(input);
-            // with convert to method input just accepts the defined type not string if we want to string should't used any 
-            // convert to method
-
+            
             Console.WriteLine("Enter your age:");
             double result2 = Convert.ToDouble(Console.ReadLine());
 
