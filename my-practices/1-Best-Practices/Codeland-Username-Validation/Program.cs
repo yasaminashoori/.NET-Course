@@ -14,7 +14,6 @@ class MainClass
             
         }
         return str;
-
     }
 
     static void Main()
