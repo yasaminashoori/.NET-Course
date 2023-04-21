@@ -45,7 +45,6 @@ namespace Days_of_week
 
                     break;
             }
-
         }
     }
 }
