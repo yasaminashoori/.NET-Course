@@ -9,13 +9,14 @@ namespace arrays
         {
             string[] froots = { "apple", "melon" };
             double[] bigNumbers = { 2274, 24000, 12123340, 2385 };
+            int[] littleNums = { 2223, 240 };
 
-            froots[1] = "Lemon"; //Changing the valuee of array
+            froots[1] = "Lemon"; //Changing the value of array
             Console.WriteLine(froots); //print the name space
             Console.WriteLine(bigNumbers[0]);
-            Console.WriteLine(Array.Sort(bigNumbers));
-
-
+            SortNums(littleNums);
+            Console.WriteLine(littleNums);
+        
             for (int i = 0; i < froots.Length; i++) //print all of the values of array
             {
                 Console.WriteLine(froots[i]);
@@ -35,9 +36,9 @@ namespace arrays
             {
                 Console.WriteLine($"the indexes are : {applications}");
             }
-            
 
-            //Another array :  declares an 1D Array of string
+
+            //Another array: declares an 1D Array of string
             string[] coffeeShop;
 
             // allocating memory for coffee names.
@@ -50,6 +51,10 @@ namespace arrays
             Console.WriteLine();
             foreach (string coffeename in coffeeShop)
                 Console.WriteLine(coffeename + " ");
+        }
+        public static void SortNums(int[] littleNums)
+        {
+            Array.Reverse(littleNums);
         }
     }
 }
