@@ -5,8 +5,7 @@ namespace Days_of_week
     class Program
     {
         static void Main(string[] args)
-        {
-            
+        { 
             string dayName;
             Console.WriteLine("Please enter a number from 1 to  7 : ");
             int day = Convert.ToInt32(Console.ReadLine());
