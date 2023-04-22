@@ -1,6 +1,6 @@
 # Updated from C#-Course to Back-End-Courses
 
- This Repo includes all of my little and smallT but important practices through the Back-End Roadmap.
+ This Repo includes all of my little and small, but important practices through the Back-End Roadmap.
  
 There are 2 folders, one is my practices within the course to understand better the concepts and two is course challenges, which is the solution to challenges and will be updated during the learning journey.
 
