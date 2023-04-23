@@ -1,0 +1,3 @@
+string name = null; 
+var name = "";  equal var name = string.Empty;
+string name;   // not initilized

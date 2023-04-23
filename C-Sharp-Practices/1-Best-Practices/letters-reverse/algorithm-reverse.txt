@@ -1,0 +1,7 @@
+1. Write a C# Sharp program that takes three letters as input and display them in reverse order. 
+Enter letter: b
+Enter letter: a
+Enter letter: t
+Expected Output :
+t a b
+/*******************************

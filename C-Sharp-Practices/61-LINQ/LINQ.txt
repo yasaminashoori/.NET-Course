@@ -1,0 +1,7 @@
+ LINQ = Language Integrated Query
+
+
+Query syntax : 
+
+
+Method syntax :

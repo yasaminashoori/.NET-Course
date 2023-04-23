@@ -1,0 +1,16 @@
+1-Arrays object 
+2- Anonymos objects
+
+anonymos objects :  doesn't have specified data type and mo access to inside of the objects   :  new Animal("bee") 
+
+Another way of declaration :
+
+var zoo= new Animal[] {3}
+
+      var myAnimal = new Animal("Ansect");
+            var myAnimal2 = new Animal("Bee");
+            var myAnimal3 = new Animal("Spider");
+
+            zoo[0] = myAnimal;
+            zoo[1] = myAnimal2;
+            zoo[2] = myAnimal3;

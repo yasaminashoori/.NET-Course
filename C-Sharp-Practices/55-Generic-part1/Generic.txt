@@ -1,0 +1,2 @@
+Uses : when we want to use a data-type but don't specify the exact type of it. in other word a data-type thst specifies dynamically.
+Use in almos everywhere in C# program : generic class - generic method - generic fields - generic interface
