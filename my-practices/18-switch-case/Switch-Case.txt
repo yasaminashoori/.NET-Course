@@ -1,2 +1,0 @@
-In C# 8 there is no relational pattern and it is available in C3 9 or greater. So we can't use Cases like :  case >= 14: and 
-the most common use is :  cas "C#": 

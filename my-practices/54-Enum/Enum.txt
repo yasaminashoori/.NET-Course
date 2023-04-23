@@ -1,6 +1,0 @@
-
-Enum is kind of class that in C family languages.
-Static Lists that they not will change  and mosylt in string int format are stored.
-Enum has access modifires.
-Enum numbering the values auto but we can change the start index or any of them
-Magic string
