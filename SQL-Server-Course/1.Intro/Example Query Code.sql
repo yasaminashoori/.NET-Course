@@ -1,0 +1,1 @@
+execute sp_server_info
