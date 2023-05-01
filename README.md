@@ -14,6 +14,6 @@ You can see the best challenges of C# in the links below :
 
 - What is Databse ? 
 
-- What do we need to DBs ?
+- Why do we need to DBs ?
 
 
