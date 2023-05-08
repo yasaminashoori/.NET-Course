@@ -62,11 +62,9 @@ namespace CLI_BMI
             var bmi = Math.Round(weight / Math.Pow(height / 100, 2), 2);
 
             if (bmi <= 18.4)
-            {
-                
+            { 
                 Console.WriteLine($"You are Underweight");
                 return bmi;
-
             }
             else if (bmi >= 18.52 && bmi <= 24.9)
             {
