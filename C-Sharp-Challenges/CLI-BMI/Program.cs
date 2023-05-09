@@ -5,7 +5,6 @@ namespace CLI_BMI
     class Program
     {
         // create a program that when you typed dotnet run => use --help invalid command and
-
         // if typed dotnet run --helps not dotnet run bmi --helps worked
         // divide the program to the inner methods and pass them to the final(main) method .
         static void Main(string[] args)
@@ -13,12 +12,10 @@ namespace CLI_BMI
             CommandInputs(args);
             RunMainCommands(args);
         }
-
         static void NotRelatedCommands()
         {
             Console.WriteLine("Invalid command :( \n Use --helps switch to show help");
         }
-
         static void Helps()
         {
             Console.WriteLine("\n --height \t Your height (centimeters) ");
@@ -26,14 +23,10 @@ namespace CLI_BMI
             Console.WriteLine("\n --version \t Show current version ");
             Console.WriteLine("\n --helps \t Show command list ");
         }
-
         static void Version()
         {
             Console.WriteLine("Current verson is : 1.0");
         }
-
-
-
         static void CommandInputs(string[] args)
         {
             if (args[1] == "--height" && args[3] == "--weight")
@@ -41,7 +34,6 @@ namespace CLI_BMI
                 var weight = Convert.ToInt32(args[4]);
                 var height = Convert.ToDouble(args[2]);
                 BmiFormula(height, weight);
-                
             }
             else if (args[1] == "--weight" && args[3] == "--height")
             {
@@ -50,9 +42,6 @@ namespace CLI_BMI
                 BmiFormula(height, weight);
             }
         }
-
-        
-
         static double BmiFormula(double height, double weight)
         {
             height = Convert.ToDouble(Console.ReadLine());
@@ -82,8 +71,6 @@ namespace CLI_BMI
                 return bmi;
             }
         }
-
-
         static void RunMainCommands(string[] args)
         {
             if (args.Length > 0)
