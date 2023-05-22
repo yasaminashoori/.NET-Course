@@ -11,7 +11,6 @@ namespace rock_paper_scissors
             string computer = "";
             while (answer != "NO")
             {
-                
                 string[] states = new string[3] { "ROCK", "PAPER", "SCISSOR" };
                 Random rnd = new Random();
                 int n = rnd.Next(0, 3);
@@ -86,7 +85,6 @@ namespace rock_paper_scissors
                     break;
             }
         }
-
         static string PlayAgain(string answer)
         {
             Console.WriteLine("Do u want to continue(YES/NO):");
