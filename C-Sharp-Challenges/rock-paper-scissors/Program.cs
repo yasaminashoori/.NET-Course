@@ -45,7 +45,6 @@ namespace rock_paper_scissors
                     // break;
             }
         }
-
         static string UserChoice(string[] states, string user)
         {
             // string user = "";
@@ -54,9 +53,7 @@ namespace rock_paper_scissors
                 Console.WriteLine("In this game you should Select one of these states : ROCK - PAPER - SCISSOR \n select one of them:");
                 user = Console.ReadLine().ToUpper();
             }
-
             return user;
-
         }
         static void GameRules(string user, string[] states, int n, string answer)
         {
