@@ -11,7 +11,6 @@ namespace rock_paper_scissors
             string computer = "";
             while (answer != "NO")
             {
-                
                 string[] states = new string[3] { "ROCK", "PAPER", "SCISSOR" };
                 Random rnd = new Random();
                 int n = rnd.Next(0, 3);
@@ -19,9 +18,6 @@ namespace rock_paper_scissors
                 Console.WriteLine($"Computer Round : {ComputerChoice(rnd, computer)}");
                 GameRules(user, states, n, answer);
                 PlayAgain(answer);
-                // string user = Console.ReadLine().ToUpper();
-                // Console.WriteLine($"Computer: {states[n]}");
-                // ,........................................
                 Console.WriteLine("Start the game !");
             }
 
@@ -46,18 +42,14 @@ namespace rock_paper_scissors
                     // break;
             }
         }
-
         static string UserChoice(string[] states, string user)
         {
-            // string user = "";
             while (user != states[0] && user != states[1] && user != states[2])
             {
                 Console.WriteLine("In this game you should Select one of these states : ROCK - PAPER - SCISSOR \n select one of them:");
                 user = Console.ReadLine().ToUpper();
             }
-
             return user;
-
         }
         static void GameRules(string user, string[] states, int n, string answer)
         {
@@ -86,7 +78,6 @@ namespace rock_paper_scissors
                     break;
             }
         }
-
         static string PlayAgain(string answer)
         {
             Console.WriteLine("Do u want to continue(YES/NO):");

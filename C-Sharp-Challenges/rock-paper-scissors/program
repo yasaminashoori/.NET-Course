@@ -9,7 +9,6 @@ namespace Helloworld
             string answer = "";
             while (answer != "NO")
             {
-
                 Console.WriteLine("In this game you should Select one of these states : ROCK - PAPER - SCISSOR");
                 string[] states = new string[3] { "ROCK", "PAPER", "SCISSOR" };
                 Random rnd = new Random();
@@ -18,10 +17,7 @@ namespace Helloworld
                 // string user = Console.ReadLine().ToUpper();
                 Console.WriteLine($"Computer: {states[n]}");
             }
-
         }
-            
-
         static string ComputerChoice(Random rnd)
         {
         if (rnd.Next(0, 3) == 0)
@@ -37,7 +33,6 @@ namespace Helloworld
             return "SCISSOR";
             }
         }
-
                 static string UserChoice(string[] states)
                 {
                     string user = "";
@@ -49,8 +44,6 @@ namespace Helloworld
                     }
                     return user;
                 }
-
-
                 static void GameRules(string user, string[] states, int n, string answer)
                 {
                 switch (user)
@@ -80,7 +73,6 @@ namespace Helloworld
                 // Console.WriteLine("Do u want to continue(YES/NO):");
                 // answer = Console.ReadLine().ToUpper();
                 }
-
                 static string PlayAgain(string answer)
                 {
                     Console.WriteLine("Do u want to continue(YES/NO):");
