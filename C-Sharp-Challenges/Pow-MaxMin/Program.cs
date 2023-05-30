@@ -61,7 +61,6 @@ namespace my_console_app
             }
             return number;
         }
-
         
         static double MaximumOfNumbers(double[] myArray)
         {

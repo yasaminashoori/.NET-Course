@@ -4,9 +4,6 @@ namespace CLI_BMI
 {
     class Program
     {
-        // create a program that when you typed dotnet run => use --help invalid command and
-        // if typed dotnet run --helps not dotnet run bmi --helps worked
-        // divide the program to the inner methods and pass them to the final(main) method .
         static void Main(string[] args)
         {
             CommandInputs(args);

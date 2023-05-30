@@ -49,7 +49,6 @@ namespace BMI
                 Console.Write("You are Obese : ");
                 return bmi;
             }
-
         }
     }
 }
