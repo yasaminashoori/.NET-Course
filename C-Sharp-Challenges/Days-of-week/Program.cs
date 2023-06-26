@@ -42,7 +42,6 @@ namespace Days_of_week
                     break;
                 default:
                     Console.WriteLine("This is invalid name !");
-
                     break;
             }
         }
