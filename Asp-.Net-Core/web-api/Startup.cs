@@ -6,11 +6,14 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using web_api.Data;
+using web_api.Repository;
 
 namespace web_api
 {
@@ -26,7 +29,12 @@ namespace web_api
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<BookStoreContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("BookStoreConnectionString")));
             services.AddControllers();
+
+            services.AddTransient<IBookRepository, BookRepository>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
@@ -39,9 +47,9 @@ namespace web_api
             app.UseSwagger();
             app.UseSwaggerUI(c =>
             {
-            c.SwaggerEndpoint("v1/swagger.json", "My API V1");
+                c.SwaggerEndpoint("v1/swagger.json", "My API V1");
             });
-            
+
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
