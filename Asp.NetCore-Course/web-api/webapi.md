@@ -136,7 +136,55 @@ What is the environment: 1.Development(local IP, host the app in locaal systetm)
 
 - iisSetting used for iis profile.
 
-- appsetting.json and appsettings.development.json: the number two is settigns of run time when run the app till app is opens. these settings aren't for launch time but run time. we have different log levels  
+- appsetting.json and appsettings.development.json: 
+
+- appsettings.development.json: used for development stage. it is settigns of run time when run the app untill app is opens.Logging in this part is the all things comes up when you runs the app but we have multiple levels up loogs in Asp .NET Core. the first one is information logs includes port, hosts. (includes: trace that are logs of everything and its dangerous, Debug that shouldn't b used in production stage, warnings just the errors used for production too, error just the errors that happened, critical are the worst one and the program has downs) all of them includes the subset of their area. these settings aren't for launch time but run time. we have different log levels.  
+
+- appsetting.json: production stage.
+
+# 9. Migration: how to build web API app from console app.
+
+- use this command to make a console app: dotnet new console -f netcoreapp3.1
+- 1. CS Proj: the first step! it has settigns of all packages so in the sdk part we should add Web at the end "Microsoft.NET.Sdk.Web".
+- 2. CS Proj: remove outputtype "exe" cause it is no more a console app that pronts the result.
+- 3. dotnet restore to save the changes.
+- 4. Program.cs: add an object called hostbuilder. hostbuilder is a concept that you make your hosts. add createhostbuilder cause the packages looks for this name in the program. createdefaultbuilder is an object made from hostbuilder that adds the dependency injection to the dot net new versioin and logging, environment and supported hhtp. add configurewebhostdefault to make kestrel profile or IIS. add startup to the project too. 
+in the end add createhostbuilder()run.build() to run the project.
+
+- 5. Startup.cs: two important methods have here: ConfigureServices, Configure. add these methods to the program, so the startup file runs in the run time stage. in configureservices  we registered all of the configs and the dependency injection process happens here. 
+- but in configure we add the http pipelines of the program.
+
+- 6. the last things is add routings to our project and make web API. routings means with specific URL's our app will be accesable.
+after add routings we map the endpoints to the addresses we want. map.get means what url pattern you add and we add / that in the route types / gets access to the url and do the following job:  response.writeasync "Hello from my api". or add another map and /test in the url.
+
+- 7. Add controller to make better web API: add the end points like this is not suggested so the point is to use from controllers. they are the services that we write our methods within it and change them to endpoint to route them. in configureservices add controllers to register the controllers but we have multiple modes mvc, razor and addcntroller to make web API. and add the endpoints in the pipeline (configure method) too.
+
+- 8. Add controllers to project: in the route of project add controllers folder. make a C# class with attention to this note that the controllers should have contrllers suffix. and should inherits dron controllerbase class cause it is the base class for some methods. 
+
+- 9. add [ApiController] to add some filters for wrong parameters. and add a get message. 
+- 10. add [route("test")] when /test it will runs the program in this instruction.
+if add another get1 message error 500 appears (it happens for one /test endpoint that gets two get1 and get actions and don't undrestand one of them should be use) to prevent getting this error should add error stage in configures pipeline "usedeveloperexceptionpage" but shouldnt the user see this in production and ahould be shown in develpment stage if "ifdevelopment" was true add exception. 
+for fixing the action problem add these to andpoint: /test[action] and add the action to make it works.
+
+- 11. Middlewares and http request pipeline: middleware is a piece of code inside the http pipeline to add changes on requests.
+the order of middlewares have importance to specify the order of request pipe line.
+middlewares importance: routings, authentication, authorize, global things, developerexceptionpage.
+1.we can unfinite middleares 2.the order is so important 3. we can have our custom middlewares.
+Run method: if used this other requests will be ignored and this runs at first.
+Use method: too many of them like coockies, authorize and others are in this category. and also it will call the next method if you typed.
+app.Map method: the path in the url recieved and matched so now execute this commands.
+The right way: it is better to add a class for custom middlewares and called it custommiddleware in the startup.cs and paste the contents of use method in the class.
+Add inject: at configures add inject with addtransient() to register the changes.
+Routing: it means when you sends a request to your app and it will decided to where should go (what controllers) and what actions called routing. 
+we have multiple routing in asp: to have routings should use middlewares called userouting or useendpoints.
+add another controller called valuecontroller.
+Types: 1.convenient base 2.attribute base 
+we doing by the convenient base, test/action and should undrestand absed on the name.
+if we don't have the rout[] at the top we have to in all of the routes add them sepeartly.
+
+- Get property from user: in the metod get add int id to print the id of user : get-books/{id}/name/{name}
+
+- Query string/param way: we used http method get, but we can send some strings in form of query to the request not by variables that we did .before. if we get it as parameters to the method makes query strings : get-all-books?List=2500&listName=test
 
 # Intro to Databasse and PostgreSQL
 
