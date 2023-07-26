@@ -186,6 +186,7 @@ if we don't have the rout[] at the top we have to in all of the routes add them 
 
 - Query string/param way: we used http method get, but we can send some strings in form of query to the request not by variables that we did .before. if we get it as parameters to the method makes query strings : get-all-books?List=2500&listName=test
 
+
 # Intro to Databasse and PostgreSQL
 
 
