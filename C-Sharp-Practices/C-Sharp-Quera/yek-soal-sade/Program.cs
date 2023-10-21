@@ -1,5 +1,4 @@
-﻿namespace Reverse_Print;
-
+﻿namespace yek_soal_sade;
 class Program
 {
     static void Main(string[] args)
