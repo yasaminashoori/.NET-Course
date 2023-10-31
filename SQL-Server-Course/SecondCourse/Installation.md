@@ -20,12 +20,7 @@
      
  2- اما اگر از SSMS 2019 استفاده می‌کنید، می‌توانید پکیج کلی SQL_Toolbelt_2023-07-26 را دانلود کرده و در هنگام انتخاب برنامه ها SQL Prompt را انتخاب کرده و نصب کنید و با استفاده از KeyGen لایسنس را فعال کنید.
 
-لینک‌های دانلود:
-
   - [مشاهده صفحه دانلود و تمام نسخه ها](https://downloadly.ir/software/programming/redgate/)
-
-  - لینک های دانلود:
-  - 
   - [دانلود SQL_Toolbelt_2023-07-26](https://dl3.downloadly.ir/Files/Software/SQLToolbelt_2023-07-26_Downloadly.ir.rar)
   - [دانلود RedGate_SQL Toolbelt Keygens](https://dl.downloadly.ir/Files/Software/RedGate_SQL_Toolbelt_Keygens_Downloadly.ir.rar)
   - [دانلود Redgate_SQL Prompt_8.2](https://dl.downloadly.ir/Files/Software/Redgate_SQL_Prompt_8.2_Downloadly.ir.rar)
