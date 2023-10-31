@@ -13,6 +13,12 @@
  
    [لینک آموزش غیرفعال سازی آنتی ویروس ویندوز 11](https://www.zoomit.ir/computer-learning/387186-how-to-disablewindows-11antivirus/)
 
+
+   - ویدئوی راهنما
+
+   [لینک دانلود آموزش نصب ](https://www.dropbox.com/scl/fi/9d3fnsat1jtf6tfgc86uh/InstallAndUseSqlPrompt.mp4?rlkey=j7xqgw9m0eknopgx1sfc0h4a6&dl=0)
+
+  
 لینک دانلود:
 
  1-  اگر RedGate SQL Prompt v8.2 را برای نصب انتخاب کنید با پیغامی مواجه می‌شوید که باید SSMS 2016 (SQL Server Management Studio) را دانلود کنید. سپس بعد از دانلود و نصب، با استفاده از Keygen کد 
