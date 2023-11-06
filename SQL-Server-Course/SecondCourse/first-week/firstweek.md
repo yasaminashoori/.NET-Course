@@ -7,3 +7,7 @@
 limited , auto increment 
 
 مقدار  id هیچ اهمیتی ندارد و ممکنه وقفه داشته باشه 
+
+
+# Session 2
+ 
